@@ -1,0 +1,95 @@
+external_templates:
+  git: PMM/templates
+
+templates:
+  streaming:
+    default:
+      key: <<key>>
+      sort_by: user_rating.desc
+      sort_by_<<key>>: <<sort_by>>
+    optional:
+      - schedule_<<key>>
+    schedule: <<schedule_<<key>>>>
+    sync_mode: sync
+    summary: <<collection_name>>
+    delete_not_scheduled: false
+
+#####################################################
+#              Streaming Top 10 Collections         #
+#####################################################
+
+collections:
+  Streaming Top 10 Collections:
+    template:
+      - name: separator
+        separator: streaming
+    #schedule: hourly(7)
+
+  NetFlix Top 10:
+    variables:
+      key: netflix
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: true
+        visible_shared_<<key>>: true
+        pre: _
+        order_<<key>>: 1
+      - name: arr
+    flixpatrol_top:
+      platform: netflix
+      location: germany
+      time_window: yesterday
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: true
+    radarr_search: true
+    url_poster: https://theposterdb.com/api/assets/204455
+    #schedule: hourly(7)
+
+  Amazon Prime Top 10:
+    variables:
+      key: amazon_prime
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: true
+        visible_shared_<<key>>: true
+        pre: _
+        order_<<key>>: 2
+      - name: arr
+    flixpatrol_top:
+      platform: amazon_prime
+      location: germany
+      time_window: yesterday
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: true
+    radarr_search: true
+    url_poster: https://theposterdb.com/api/assets/204462
+    #schedule: hourly(7)
+
+  Disney+ Top 10:
+    variables:
+      key: disney
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: true
+        visible_shared_<<key>>: true
+        pre: _
+        order_<<key>>: 3
+      - name: arr
+    flixpatrol_top:
+      platform: disney
+      location: germany
+      time_window: yesterday
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: true
+    radarr_search: true
+    url_poster: https://theposterdb.com/api/assets/204376
+    #schedule: hourly(7)

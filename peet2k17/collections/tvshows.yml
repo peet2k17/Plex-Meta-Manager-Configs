@@ -1,0 +1,4 @@
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: "21"
