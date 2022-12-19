@@ -45,8 +45,8 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    sonarr_add_missing: true
+    sonarr_search: true
     url_poster: https://theposterdb.com/api/assets/204455
     #schedule: hourly(7)
 
@@ -68,8 +68,8 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    sonarr_add_missing: true
+    sonarr_search: true
     url_poster: https://theposterdb.com/api/assets/204462
     #schedule: hourly(7)
 
@@ -91,7 +91,30 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    sonarr_add_missing: true
+    sonarr_search: true
     url_poster: https://theposterdb.com/api/assets/204376
+    #schedule: hourly(7)
+
+  Paramount+ Top 10:
+    variables:
+      key: paramount_plus
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: true
+        visible_shared_<<key>>: true
+        pre: _
+        order_<<key>>: 4
+      - name: arr
+    flixpatrol_top:
+      platform: paramount_plus
+      location: germany
+      time_window: yesterday
+      limit: 10
+    collection_order: custom
+    sync_mode: sync
+    sonarr_add_missing: true
+    sonarr_search: true
+    url_poster: https://theposterdb.com/api/assets/204457
     #schedule: hourly(7)
