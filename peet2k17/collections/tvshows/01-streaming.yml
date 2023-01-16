@@ -33,8 +33,9 @@ collections:
     template:
       - name: streaming
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: _
         order_<<key>>: 1
       - name: arr
@@ -56,8 +57,9 @@ collections:
     template:
       - name: streaming
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: _
         order_<<key>>: 2
       - name: arr
@@ -79,8 +81,9 @@ collections:
     template:
       - name: streaming
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: _
         order_<<key>>: 3
       - name: arr
@@ -102,8 +105,9 @@ collections:
     template:
       - name: streaming
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: _
         order_<<key>>: 4
       - name: arr

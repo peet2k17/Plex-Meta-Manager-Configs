@@ -25,8 +25,9 @@ collections:
     template:
       - name: top
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: 1
       - name: arr
     trakt_trending: 20
@@ -45,8 +46,9 @@ collections:
     template:
       - name: top
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: 2
       - name: arr
     tmdb_popular: 40
@@ -66,8 +68,9 @@ collections:
     template:
       - name: top
       - name: shared
-        visible_home_<<key>>: true
-        visible_shared_<<key>>: true
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
         pre: 3
       - name: arr
     imdb_chart: top_movies
