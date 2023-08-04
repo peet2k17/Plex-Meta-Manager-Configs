@@ -30,9 +30,9 @@ collections:
         visible_library_<<key>>: true
         pre: 1
       - name: arr
-    trakt_trending: 20
-    tmdb_trending_daily: 20
-    tmdb_trending_weekly: 20
+    trakt_trending: 40
+    tmdb_trending_daily: 40
+    tmdb_trending_weekly: 40
     collection_order: release
     sync_mode: sync
     radarr_add_missing: true
@@ -51,10 +51,10 @@ collections:
         visible_library_<<key>>: true
         pre: 2
       - name: arr
-    tmdb_popular: 40
+    tmdb_popular: 80
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
-      limit: 40
+      limit: 80
     collection_order: release
     sync_mode: sync
     radarr_add_missing: true
