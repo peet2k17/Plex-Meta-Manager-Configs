@@ -44,8 +44,8 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
     url_poster: https://theposterdb.com/api/assets/204455
     #schedule: hourly(7)
 
@@ -68,8 +68,8 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
     url_poster: https://theposterdb.com/api/assets/204462
     #schedule: hourly(7)
 
@@ -92,8 +92,8 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
     url_poster: https://theposterdb.com/api/assets/204376
     #schedule: hourly(7)
 
@@ -116,7 +116,7 @@ collections:
       limit: 10
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
     url_poster: https://theposterdb.com/api/assets/204457
     #schedule: hourly(7)

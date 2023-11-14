@@ -41,8 +41,8 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
 
   Best of 1980s:
     variables:
@@ -60,8 +60,8 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
 
   Best of 1990s:
     variables:
@@ -79,8 +79,8 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
 
   Best of 2000s:
     variables:
@@ -98,8 +98,8 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
 
   Best of 2010s:
     variables:
@@ -117,8 +117,8 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
 
   Best of 2020s:
     variables:
@@ -136,5 +136,5 @@ collections:
       limit: 150
       sort_by: score.desc
     collection_order: custom
-    radarr_add_missing: true
-    radarr_search: true
+    radarr_add_missing: false
+    radarr_search: false
