@@ -34,7 +34,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/1970
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-1970s
@@ -53,7 +53,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/1980
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-1980s
@@ -72,7 +72,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/1990
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-1990s
@@ -91,7 +91,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/2000
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-2000s
@@ -110,7 +110,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/2010
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-2010s
@@ -129,7 +129,7 @@ collections:
         visible_home_<<key>>: false
         visible_shared_<<key>>: false
         visible_library_<<key>>: true
-        image: decade/best/<<key>>
+        image: decade/best/2020
       - name: arr
     mdblist_list: 
       url: https://mdblist.com/lists/prc2k10/best-of-2020s
