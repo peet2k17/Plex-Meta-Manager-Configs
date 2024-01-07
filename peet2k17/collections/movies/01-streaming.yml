@@ -1,0 +1,142 @@
+external_templates:
+  git: PMM/templates
+
+templates:
+  streaming:
+    default:
+      key: <<key>>
+      sort_by: user_rating.desc
+      sort_by_<<key>>: <<sort_by>>
+    optional:
+      - schedule_<<key>>
+    schedule: <<schedule_<<key>>>>
+    sync_mode: sync
+    summary: <<collection_name>>
+    delete_not_scheduled: false
+
+#####################################################
+#              Streaming Top 10 Collections         #
+#####################################################
+
+collections:
+  Streaming Top Collections:
+    template:
+      - name: separator
+        separator: streaming
+    #schedule: hourly(7)
+
+  NetFlix Top:
+    variables:
+      key: netflix
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 1
+      - name: arr
+    flixpatrol_top:
+      platform: netflix
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: false
+    radarr_search: false
+    url_poster: https://theposterdb.com/api/assets/204455
+    #schedule: hourly(7)
+
+  Amazon Prime Top:
+    variables:
+      key: amazon_prime
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 2
+      - name: arr
+    flixpatrol_top:
+      platform: amazon_prime
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: false
+    radarr_search: false
+    url_poster: https://theposterdb.com/api/assets/204462
+    #schedule: hourly(7)
+
+  Disney+ Top:
+    variables:
+      key: disney
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 3
+      - name: arr
+    flixpatrol_top:
+      platform: disney
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    #schedule: hourly(7)
+
+  Paramount+ Top:
+    variables:
+      key: paramount_plus
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 4
+      - name: arr
+    flixpatrol_top:
+      platform: paramount_plus
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: false
+    radarr_search: false
+    url_poster: https://theposterdb.com/api/assets/204457
+    #schedule: hourly(7)
+
+  Apple+ Top:
+    variables:
+      key: apple_tv
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 5
+      - name: arr
+    flixpatrol_top:
+      platform: apple_tv
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: false
+    radarr_search: false
+    #schedule: hourly(7)

@@ -1,0 +1,27 @@
+external_templates:
+  git: PMM/templates
+
+templates:
+  decade:
+    default:
+      key: <<key>>
+      sort_by: critic_rating.desc
+      sort_by_<<key>>: <<sort_by>>
+    optional:
+      - schedule_<<key>>
+    schedule: <<schedule_<<key>>>>
+    sync_mode: sync
+    smart_label: <<sort_by_<<key>>>>
+    summary: The best Movies in the <<key>>s
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/decade/best/<<key>>.jpg
+    delete_not_scheduled: true
+
+#####################################################
+#              Franchise Collections                #
+#####################################################
+
+collections:
+  Franchise Collections:
+    template:
+      - name: separator
+        separator: franchise

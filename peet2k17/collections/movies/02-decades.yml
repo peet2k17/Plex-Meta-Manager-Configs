@@ -1,0 +1,140 @@
+external_templates:
+  git: PMM/templates
+
+templates:
+  decade:
+    default:
+      key: <<key>>
+      sort_by: user_rating.desc
+      sort_by_<<key>>: <<sort_by>>
+    optional:
+      - schedule_<<key>>
+    schedule: <<schedule_<<key>>>>
+    sync_mode: sync
+    summary: The best Movies in the <<key>>s
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/decade/best/<<key>>.jpg
+    delete_not_scheduled: true
+
+#####################################################
+#              Decade Collections                   #
+#####################################################
+
+collections:
+  Decade Collections:
+    template:
+      - name: separator
+        separator: decade
+
+  Best of 1970s:
+    variables:
+      key: best-of-1970s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/1970
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-1970s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false
+
+  Best of 1980s:
+    variables:
+      key: best-of-1980s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/1980
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-1980s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false
+
+  Best of 1990s:
+    variables:
+      key: best-of-1990s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/1990
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-1990s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false
+
+  Best of 2000s:
+    variables:
+      key: best-of-2000s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/2000
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-2000s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false
+
+  Best of 2010s:
+    variables:
+      key: best-of-2010s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/2010
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-2010s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false
+
+  Best of 2020s:
+    variables:
+      key: best-of-2020s
+    template:
+      - name: decade
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        image: decade/best/2020
+      - name: arr
+    mdblist_list: 
+      url: https://mdblist.com/lists/prc2k10/best-of-2020s
+      limit: 150
+      sort_by: score.desc
+    collection_order: custom
+    radarr_add_missing: false
+    radarr_search: false

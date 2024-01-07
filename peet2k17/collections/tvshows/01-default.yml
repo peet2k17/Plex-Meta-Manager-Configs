@@ -1,0 +1,77 @@
+external_templates:
+  git: PMM/templates
+
+templates:
+  top:
+    default:
+      key: <<key>>
+      sort_by: user_rating.desc
+      sort_by_<<key>>: <<sort_by>>
+    optional:
+      - schedule_<<key>>
+    schedule: <<schedule_<<key>>>>
+    sync_mode: sync
+    summary: TV Shows <<collection_name>> across the internet
+    delete_not_scheduled: false
+
+#####################################################
+#              Top Collections                      #
+#####################################################
+
+collections:
+  Trending:
+    variables:
+      key: trending
+    template:
+      - name: top
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: 1
+      - name: arr
+    trakt_trending: 20
+    tmdb_trending_daily: 20
+    tmdb_trending_weekly: 20
+    collection_order: release
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/244020
+    #schedule: hourly(7)
+
+  Popular:
+    variables:
+      key: popular
+    template:
+      - name: top
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: 2
+      - name: arr
+    tmdb_popular: 40
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries,tv_short
+      limit: 40
+    collection_order: release
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/244025
+    #schedule: hourly(7)
+
+  Top Rated:
+    variables:
+      key: toprated
+    template:
+      - name: top
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: 3
+      - name: arr
+    imdb_chart: top_shows
+    collection_order: custom
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/244022
+    #schedule: all[weekly(sunday), hourly(7)]
+

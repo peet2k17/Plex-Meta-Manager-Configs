@@ -1,0 +1,25 @@
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: "01"
+
+collections:
+  'Halloween':
+    schedule: range(11/01-11/31)
+    imdb_list:
+      - https://www.imdb.com/list/ls023118929/
+      - https://www.imdb.com/list/ls000099714/
+    tmdb_collection:
+      - 91361    # Halloween Collection
+      - 8581     # A Nightmare on Elm Street Collection
+      - 1733     # The Mummy Collection
+      - 8091     # Alien Collection
+    tmdb_movie:
+      - 23437    # A Nightmare on Elm Street (2010)
+    sort_title: '*010'
+    collection_order: release
+    sync_mode: sync
+    summary: Halloween Movies
+    url_poster: https://theposterdb.com/api/assets/102917
+    visible_home: true
+    visible_shared: true
