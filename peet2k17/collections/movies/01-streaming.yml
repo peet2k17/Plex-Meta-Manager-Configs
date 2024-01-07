@@ -19,13 +19,13 @@ templates:
 #####################################################
 
 collections:
-  Streaming Top 10 Collections:
+  Streaming Top Collections:
     template:
       - name: separator
         separator: streaming
     #schedule: hourly(7)
 
-  NetFlix Top 10:
+  NetFlix Top:
     variables:
       key: netflix
     template:
@@ -40,8 +40,8 @@ collections:
     flixpatrol_top:
       platform: netflix
       location: germany
-      time_window: yesterday
-      limit: 10
+      in_the_last: 7
+      limit: 20
     collection_order: custom
     sync_mode: sync
     radarr_add_missing: false
@@ -49,7 +49,7 @@ collections:
     url_poster: https://theposterdb.com/api/assets/204455
     #schedule: hourly(7)
 
-  Amazon Prime Top 10:
+  Amazon Prime Top:
     variables:
       key: amazon_prime
     template:
@@ -64,8 +64,8 @@ collections:
     flixpatrol_top:
       platform: amazon_prime
       location: germany
-      time_window: yesterday
-      limit: 10
+      in_the_last: 7
+      limit: 20
     collection_order: custom
     sync_mode: sync
     radarr_add_missing: false
@@ -73,7 +73,7 @@ collections:
     url_poster: https://theposterdb.com/api/assets/204462
     #schedule: hourly(7)
 
-  Disney+ Top 10:
+  Disney+ Top:
     variables:
       key: disney
     template:
@@ -88,16 +88,13 @@ collections:
     flixpatrol_top:
       platform: disney
       location: germany
-      time_window: yesterday
-      limit: 10
+      in_the_last: 7
+      limit: 20
     collection_order: custom
     sync_mode: sync
-    radarr_add_missing: false
-    radarr_search: false
-    url_poster: https://theposterdb.com/api/assets/204376
     #schedule: hourly(7)
 
-  Paramount+ Top 10:
+  Paramount+ Top:
     variables:
       key: paramount_plus
     template:
@@ -112,11 +109,34 @@ collections:
     flixpatrol_top:
       platform: paramount_plus
       location: germany
-      time_window: yesterday
-      limit: 10
+      in_the_last: 7
+      limit: 20
     collection_order: custom
     sync_mode: sync
     radarr_add_missing: false
     radarr_search: false
     url_poster: https://theposterdb.com/api/assets/204457
+    #schedule: hourly(7)
+
+  Apple+ Top:
+    variables:
+      key: apple_tv
+    template:
+      - name: streaming
+      - name: shared
+        visible_home_<<key>>: false
+        visible_shared_<<key>>: false
+        visible_library_<<key>>: true
+        pre: _
+        order_<<key>>: 5
+      - name: arr
+    flixpatrol_top:
+      platform: apple_tv
+      location: germany
+      in_the_last: 7
+      limit: 20
+    collection_order: custom
+    sync_mode: sync
+    radarr_add_missing: false
+    radarr_search: false
     #schedule: hourly(7)
